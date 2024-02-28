@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import  {  Component } from "react";
 
 class RegularComponent extends Component{
     constructor(){
@@ -18,12 +18,15 @@ class RegularComponent extends Component{
 
     handleClickToggle = () => {
         this.setState({...this.state, toggle:!this.state.toggle})
+        console.log(!this.state.toggle)
     }
 
     render(){
+        console.log('this is regular component')
         return <div>
             <h1>Regular Component</h1>
-            {this.state.count}
+            <h2>{this.state.count}</h2>
+            
             <button onClick={this.handleClickToggle}>Toggle</button>
             <button onClick={this.handleClickCount}>Count</button>
         </div>
